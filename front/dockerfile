@@ -8,7 +8,7 @@ RUN pip install --no-cache-dir -r /code/requirements.txt
 
 COPY ./main.py /code/main.py
 
-EXPOSE 8510
+EXPOSE 8501
 
 ENTRYPOINT ["streamlit", "run"]
 
