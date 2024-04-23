@@ -14,7 +14,7 @@ def main():
         if st.button("Classify Image") and uploaded_image is not None:
             st.image(uploaded_image, caption="Uploaded Image")
             files = {"file": uploaded_image.getvalue()}
-            res = requests.post("http://127.0.0.1:8020/classify", files=files)
+            res = requests.post("http://backend:8000/classify", files=files)
             st.write(json.loads(res.text)['prediction'])
             
     elif choice == "Text Sentiment Analysis":
@@ -24,7 +24,7 @@ def main():
         if st.button("Analyze Sentiment"):
             if text_input != "":
                 data = {"text": text_input}
-                response = requests.post("http://127.0.0.1:8020/clf_text", json=data)
+                response = requests.post("http://backend:8000/clf_text", json=data)
                 
                 if response.status_code == 200:
                     sentiment = response.json()['sentiment']
