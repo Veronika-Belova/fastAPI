@@ -4,7 +4,7 @@ import torch
 from torchvision.models import resnet18
 import torchvision.transforms as T
 
-#Загрузка imagenet_class_index
+## Загрузка imagenet_class_index
 
 # url = 'https://s3.amazonaws.com/deep-learning-models/image-models/imagenet_class_index.json'
 # response = requests.get(url)
