@@ -4,7 +4,7 @@ services:
   frontend:
     build: front
     ports:
-      - 8510:8510
+      - 8501:8501
     networks: 
       dn: 
         aliases: 
@@ -15,7 +15,7 @@ services:
   backend:
     build: api
     ports:
-      - 8020:8020
+      - 8000:8000
     networks: 
       dn: 
         aliases: 
